@@ -226,6 +226,14 @@ pytest = ">=2.6.4"
 watchdog = ">=0.6.0"
 
 [[package]]
+name = "scoping"
+version = "0.1.2"
+description = "Probably the best way to simulate block scopes in Python."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -341,7 +349,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7.9"
-content-hash = "a50690e76b5a9466fc3dcd9e03aba767ba6a454a2261fee5aee99e646254eb2d"
+content-hash = "23e24b37df77babedf491a7217a884527bd47c8348c4d4e0e54d8bb2d5ea9cb1"
 
 [metadata.files]
 atomicwrites = [
@@ -438,6 +446,9 @@ pytest = [
 ]
 pytest-watch = [
     {file = "pytest-watch-4.2.0.tar.gz", hash = "sha256:06136f03d5b361718b8d0d234042f7b2f203910d8568f63df2f866b547b3d4b9"},
+]
+scoping = [
+    {file = "scoping-0.1.2.tar.gz", hash = "sha256:9bf65830b0e43fc34880842503f551021d980699ee1b74c4d60f0611ac88e607"},
 ]
 six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},

@@ -1,5 +1,6 @@
 # import intro so i can get at the variables
-from intro import mario, __version__
+from intro import __version__
+from scoping import scoping as scoped
 
 # or
 # from intro import a file called readme, or anything declared.
@@ -29,11 +30,39 @@ def main():
     print(exists(correct_file_path))
     file = open(correct_file_path)
     # reader = ''
-    char = file.read()
+    data = file.read()
     # reader += char
+    print(data)
+    print('-' * 10)
+
     file.close()
 
-    print(mario, __version__, char)
+    with open(correct_file_path) as file:
+        print(file.read(10))
+        # the cursor reads and moves
+        # when it picks up again, it is at offset10.
+        datad = file.read()
+        print(datad)
+    collected = []
+    with open(correct_file_path) as file:
+        for line in file:
+
+            collected.append(line.replace('\n', ''))
+            # by default strip takes away the newline
+            # also strip is edge only. if there are no
+            # collected.append(line.strip('co')) will strip colorama to lorama but withotu that c, you never get to that o.
+
+    print(collected)
+    frank = 4
+    with scoped():
+        frank = 3
+    try:
+        assert frank == 2, "Tuple error message"
+        # when you assert, you have to also add the error message
+    except AssertionError as e:
+        print('{}'.format(e), 'there is an assertion error')
+    finally:
+        print('prints regardless')
 
 
 if __name__ == '__main__':
