@@ -6,6 +6,7 @@
 ## Todo list
 
 [ ] Task runner for python
+[ ] make a pandoc runner to do shit for me. Or some light weight component in the dev dependencies. Not having some basic form of automating in a scaffold is annoying.
 
 ## How to run
 
@@ -14,6 +15,9 @@
   * `poetry run python -m intro`
   * What's the difference?
     * nothing much as long as your python is in the same env space as your poetry.
+* Number of modules inside of intro.
+  * intro_to_classes
+    * `poetry run python -m intro.intro_to_classes`
 
 ## Double check your python dependencies per env
 
@@ -88,3 +92,13 @@ zipp==3.7.0
 
 * `pandoc -t rst -o README.rst README.md`
   * because rst isnt mature yet, we first write to the md then generate changes to the rst
+
+## Gotchas
+
+* vscode not realizing where the imports are.
+  * Open up the command pallet
+    * command + p
+    * type `> python`
+    * check out the drop down for 'Python Interpreter'
+    * check the env you have installed your dependencies in.
+  * Now, vscode will see the imports. No need to dance around with settings.json as microsoft is still making up their minds about their key names -> Dear microsoft vscode team, please stop that.
